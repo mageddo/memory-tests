@@ -1,0 +1,10 @@
+springmvc:
+  image: java:openjdk-8u91
+  container_name: example-spring-boot-mvc
+  hostname: "example-spring-boot-mvc.mageddo"
+  volumes:
+    - $PWD/target:/opt/spring
+  working_dir: /opt/spring
+  command: java -Xmx64m -jar example-spring-boot-mvc-1.0-SNAPSHOT.war
+  mem_limit: 300m
+  memswap_limit: 0

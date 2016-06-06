@@ -1,0 +1,9 @@
+hello-world:
+  image: node:6-slim
+  hostname: "node6slim.mageddo"
+  volumes:
+    - $PWD:/opt/node
+  working_dir: /opt/node
+  command: node index.js
+  mem_limit: 100m
+  memswap_limit: 0
