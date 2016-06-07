@@ -8,7 +8,7 @@ var wstream = fs.createWriteStream(filename);
 console.log('started');
 console.log('writing to ', filename);
 for(var i=100000; i > 0; i--){
-	var str = util.format("linha de teste: %s", new Date().getTime());
+	var str = util.format("linha de teste: %s\n", new Date().getTime());
 	wstream.write(str);
 }
 wstream.end(function(){

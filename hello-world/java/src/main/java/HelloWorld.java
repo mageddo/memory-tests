@@ -18,7 +18,7 @@ public class HelloWorld {
 
 		System.out.printf("writing to %s\n", thefile.getAbsolutePath());
 		for(int i=100_000; i > 0; i--){
-			byte[] buffer = String.format("linha de teste: %s", System.nanoTime()).getBytes();
+			byte[] buffer = String.format("linha de teste: %s\n", System.currentTimeMillis()).getBytes();
 			out.write(buffer);
 		}
 		out.close();
